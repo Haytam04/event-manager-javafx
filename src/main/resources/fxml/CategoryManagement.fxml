@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="20" alignment="TOP_CENTER" xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.eventmanager.controller.CategoryController"
+      style="-fx-padding: 30; -fx-background-color: white;" stylesheets="@../css/style.css">
+
+    <Label text="Manage Categories" style="-fx-font-size: 24; -fx-font-weight: bold; -fx-text-fill: #6200EE;"/>
+
+    <HBox spacing="10" alignment="CENTER">
+        <TextField fx:id="txtCategoryName" promptText="Category Name" styleClass="text-field" HBox.hgrow="ALWAYS"/>
+        <Button text="Add Category" onAction="#handleAdd" styleClass="button-primary"/>
+    </HBox>
+
+    <ListView fx:id="listCategories" prefHeight="300" />
+
+    <HBox spacing="15" alignment="CENTER_RIGHT">
+        <Button text="Update Selected" onAction="#handleUpdate" style="-fx-background-color: #2196F3; -fx-text-fill: white;" />
+        <Button text="Delete Selected" onAction="#handleDelete" styleClass="button-danger" />
+        <Button text="Back to Dashboard" onAction="#handleBack" style="-fx-background-color: transparent;" />
+    </HBox>
+</VBox>

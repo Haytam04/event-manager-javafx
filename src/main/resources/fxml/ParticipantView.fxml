@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/25"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.eventmanager.controller.ParticipantController"
+            stylesheets="@../css/style.css">
+
+    <children>
+        <!-- Title and Counter -->
+        <HBox layoutX="21.0" layoutY="25.0" spacing="10">
+            <Text text="Participants"
+                  styleClass="label-title" />
+            <Label fx:id="maxParticipantsLabel"
+                   styleClass="status-info"
+                   text="0/0 participants" />
+        </HBox>
+
+        <!-- ListView with CSS styling -->
+        <ListView fx:id="participantListView" layoutX="21.0" layoutY="50.0"
+                  prefHeight="380.0" prefWidth="358.0"
+                  styleClass="participant-list" />
+
+        <!-- Form Panel Container -->
+        <AnchorPane layoutX="388.0" layoutY="50.0" prefWidth="290.0" prefHeight="430.0"
+                    styleClass="form-panel">
+            <children>
+                <!-- Form Title -->
+                <Text layoutX="0.0" layoutY="-10.0" text="Add/Edit Participant"
+                      styleClass="label-subtitle" />
+
+                <!-- Name Field -->
+                <Text layoutX="0.0" layoutY="30.0" text="Name:"
+                      styleClass="label-field" />
+                <TextField fx:id="name" layoutX="0.0" layoutY="36.0"
+                           prefHeight="40.0" prefWidth="240.0"
+                           promptText="Enter participant name"
+                           styleClass="text-field" />
+
+                <!-- Email Field -->
+                <Text layoutX="0.0" layoutY="95.0" text="Email:"
+                      styleClass="label-field" />
+                <TextField fx:id="email" layoutX="0.0" layoutY="101.0"
+                           prefHeight="40.0" prefWidth="240.0"
+                           promptText="Enter participant email"
+                           styleClass="text-field" />
+
+                <!-- Buttons -->
+                <Button fx:id="addUpdateButton"
+                        layoutX="0.0" layoutY="160.0" mnemonicParsing="false"
+                        onAction="#handleAddParticipant" prefHeight="40.0" prefWidth="240.0"
+                        text="Add Participant"
+                        styleClass="button-primary" />
+
+                <Button layoutX="0.0" layoutY="210.0" mnemonicParsing="false"
+                        onAction="#handleDeleteParticipant" prefHeight="40.0" prefWidth="240.0"
+                        text="Delete"
+                        styleClass="button-danger" />
+
+                <Button layoutX="0.0" layoutY="260.0" mnemonicParsing="false"
+                        onAction="#handleClearForm" prefHeight="40.0" prefWidth="240.0"
+                        text="Clear"
+                        styleClass="button-secondary" />
+
+                <!-- Instructions -->
+                <Text layoutX="0.0" layoutY="310.0"
+                      text="Instructions:"
+                      styleClass="label-subtitle" />
+                <Text layoutX="0.0" layoutY="335.0"
+                      text="1. Click participant to edit"
+                      styleClass="label-instruction" />
+                <Text layoutX="0.0" layoutY="355.0"
+                      text="2. Modify fields above"
+                      styleClass="label-instruction" />
+                <Text layoutX="0.0" layoutY="375.0"
+                      text="3. Click Add/Update to save"
+                      styleClass="label-instruction" />
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
