@@ -11,7 +11,7 @@ import java.net.URL;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        // The path must match your resources folder structure exactly
+        // This path must match your resources folder structure exactly
         URL fxmlLocation = getClass().getResource("/fxml/LoginView.fxml");
 
         if (fxmlLocation == null) {
