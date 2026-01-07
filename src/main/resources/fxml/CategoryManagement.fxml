@@ -8,7 +8,8 @@
 
 <VBox spacing="20" alignment="TOP_CENTER" xmlns="http://javafx.com/javafx/21"
       xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.eventmanager.controller.CategoryController"
-      style="-fx-padding: 30; -fx-background-color: white;" stylesheets="@../css/style.css">
+      style="-fx-padding: 30; -fx-background-color: white;" prefHeight="700.0" prefWidth="1000.0"
+      stylesheets="@../css/style.css">
 
     <Label text="Manage Categories" style="-fx-font-size: 24; -fx-font-weight: bold; -fx-text-fill: #6200EE;"/>
 

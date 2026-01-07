@@ -4,6 +4,8 @@ import com.example.eventmanager.entity.Event;
 import com.example.eventmanager.entity.Participant;
 import com.example.eventmanager.service.ParticipantService;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert;
@@ -14,6 +16,7 @@ import javafx.scene.layout.Priority;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.util.Optional;
 
 public class ParticipantController {
@@ -36,6 +39,8 @@ public class ParticipantController {
     private Event selectedEvent;
     private final ParticipantService participantService = new ParticipantService();
     private Participant selectedParticipant;
+
+
 
     public void setSelectedEvent(Event event) {
         this.selectedEvent = event;

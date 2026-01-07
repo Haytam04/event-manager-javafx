@@ -8,25 +8,25 @@
 <?import javafx.geometry.Insets?>
 
 <BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            prefHeight="700.0" prefWidth="1000.0"
             fx:controller="com.example.eventmanager.controller.DashboardController" stylesheets="@../css/style.css">
     <top>
-        <HBox spacing="20" style="-fx-background-color: white; -fx-padding: 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 0, 0, 0, 5);" alignment="CENTER_LEFT">
-            <Label text="EventHub" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #6200EE;" />
+        <HBox styleClass="header-bar" spacing="20" alignment="CENTER_LEFT">
+            <Label text="EventHub" style="-fx-font-size: 26; -fx-font-weight: bold; -fx-text-fill: -fx-primary;"/>
             <Region HBox.hgrow="ALWAYS" />
 
-            <Button text="Categories" onAction="#handleManageCategories" styleClass="button-primary" prefHeight="35"/>
-
-            <Button text="+ NEW EVENT" onAction="#handleAddEvent" styleClass="button-primary" prefHeight="35"/>
-
-            <Separator orientation="VERTICAL" prefHeight="20" />
-
-            <Label fx:id="lblWelcome" style="-fx-text-fill: #424242; -fx-font-weight: bold;" />
-            <Button text="Logout" onAction="#handleLogout" style="-fx-background-color: transparent; -fx-text-fill: #757575; -fx-cursor: hand;" />
+            <HBox spacing="10" alignment="CENTER">
+                <Button text="Manage Categories" onAction="#handleManageCategories" styleClass="button-secondary"/>
+                <Button text="+ Create Event" onAction="#handleAddEvent" styleClass="button-primary"/>
+                <Separator orientation="VERTICAL" prefHeight="20" />
+                <Label fx:id="lblWelcome" style="-fx-font-weight: bold;"/>
+                <Button text="Logout" onAction="#handleLogout" style="-fx-background-color: transparent; -fx-text-fill: -fx-text-secondary;"/>
+            </HBox>
         </HBox>
     </top>
     <center>
-        <ScrollPane fitToWidth="true" style="-fx-background-color: #f8f9fa; -fx-background: #f8f9fa; -fx-border-color: transparent;">
-            <FlowPane fx:id="eventFlowPane" hgap="25" vgap="25" style="-fx-padding: 30;" />
+        <ScrollPane fitToWidth="true" style="-fx-background-color: transparent; -fx-padding: 30;">
+            <FlowPane fx:id="eventFlowPane" hgap="25" vgap="25" alignment="TOP_LEFT" />
         </ScrollPane>
     </center>
 </BorderPane>

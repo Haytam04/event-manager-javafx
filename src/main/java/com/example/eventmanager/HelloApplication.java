@@ -21,8 +21,8 @@ public class HelloApplication extends Application {
 
         FXMLLoader fxmlLoader = new FXMLLoader(fxmlLocation);
         Scene scene = new Scene(fxmlLoader.load(),500,400);
-        stage.setMinWidth(600);
-        stage.setMinHeight(400);
+        stage.setMinWidth(700);
+        stage.setMinHeight(600);
         stage.setTitle("Event Management System");
         stage.setScene(scene);
         stage.show();

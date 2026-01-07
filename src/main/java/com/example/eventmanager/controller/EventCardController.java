@@ -17,7 +17,7 @@ import java.util.Optional;
 
 public class EventCardController {
     @FXML private ImageView imgEvent;
-    @FXML private Label lblTitle, lblLocation, lblParticipants;
+    @FXML private Label lblTitle, lblLocation, lblParticipants, lbCategory;
 
     private Event event;
     private EventService eventService = new EventService();
@@ -39,6 +39,7 @@ public class EventCardController {
 
         lblTitle.setText(event.getTitle());
         lblLocation.setText(event.getLocation());
+        lbCategory.setText(event.getCategory().toString());
         lblParticipants.setText("Max: " + event.getMaxParticipants());
 
         try {

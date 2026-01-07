@@ -27,21 +27,21 @@
         </HBox>
     </VBox>
 
-    <VBox spacing="5">
-        <Label text="Category" style="-fx-font-weight: bold; -fx-text-fill: #757575;"/>
-        <ComboBox fx:id="comboCategory" promptText="Select a category" prefWidth="450" styleClass="combo-box" />
+    <VBox spacing="5" HBox.hgrow="ALWAYS">
+        <Label text="Date" style="-fx-font-weight: bold; -fx-text-fill: #757575;"/>
+        <DatePicker fx:id="datePicker" prefWidth="400" />
     </VBox>
 
-    <HBox spacing="20">
-        <VBox spacing="5" HBox.hgrow="ALWAYS">
-            <Label text="Date" style="-fx-font-weight: bold; -fx-text-fill: #757575;"/>
-            <DatePicker fx:id="datePicker" prefWidth="200" />
+
+        <VBox spacing="5">
+            <Label text="Category" style="-fx-font-weight: bold; -fx-text-fill: #757575;"/>
+            <ComboBox fx:id="comboCategory" promptText="Select a category" prefWidth="450" styleClass="combo-box" />
         </VBox>
         <VBox spacing="5" HBox.hgrow="ALWAYS">
             <Label text="Max Participants" style="-fx-font-weight: bold; -fx-text-fill: #757575;"/>
-            <Spinner fx:id="spinMaxParticipants" editable="true" prefWidth="200" />
+            <Spinner fx:id="spinMaxParticipants" editable="true" prefWidth="450"/>
         </VBox>
-    </HBox>
+
 
     <HBox spacing="15" alignment="CENTER_RIGHT" style="-fx-padding: 20 0 0 0;">
         <Button text="Cancel" onAction="#handleCancel" prefWidth="100" prefHeight="35" style="-fx-background-color: transparent;" />
